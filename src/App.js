@@ -4,8 +4,9 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import DefaultLayout from './components/DefaultLayout';
 import SimpleLayout from './components/SimpleLayout';
-import Cadastro from './pages/cadastro/Cadastro';
 import RecuperarSenha from './pages/recuperarsenha/RecuperarSenha';
+import AlterarSenha from './pages/alterarsenha/AlterarSenha';
+import CadastrarUsuario from './pages/cadastro/CadastrarUsuario';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Routes>
           <Route path='/' element={<DefaultLayout><Home/></DefaultLayout>}/>
           <Route path='/login' Component={Login} element={<SimpleLayout><Login/></SimpleLayout>}/>
-          <Route path='/cadastro' Component={Cadastro} element={<SimpleLayout><Cadastro/></SimpleLayout>}/>
+          <Route path='/cadastrarusuario' Component={CadastrarUsuario} element={<SimpleLayout><CadastrarUsuario/></SimpleLayout>}/>
           <Route path='/recuperarsenha' Component={RecuperarSenha} element={<SimpleLayout><RecuperarSenha/></SimpleLayout>}/>
+          <Route path='/alterarsenha' Component={AlterarSenha} element={<SimpleLayout><AlterarSenha/></SimpleLayout>}/>
         </Routes>
       </BrowserRouter>
       {/* Footer */}

@@ -1,0 +1,31 @@
+.form-container {
+    background-color: rgb(12, 27, 56);
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+}
+
+.form-card {
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-field {
+    margin-bottom: 15px;
+}
+
+.p-inputtext-sm {/*
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; */
+}
