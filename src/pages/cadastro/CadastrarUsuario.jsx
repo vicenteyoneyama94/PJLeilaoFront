@@ -30,14 +30,14 @@ const CadastrarUsuario = () => {
                         <InputText type="number" className="p-inputtext-sm" placeholder="CPF" />
                     </div>
                     <div className="p-field">
-                    <label htmlFor="Telefone">Telefone</label><br/>
+                    <label htmlfor="Telefone">Telefone</label><br/>
                         <InputText type="number" className="p-inputtext-sm" placeholder="Telefone" />
                     </div>
                     <div className="p-password">
-                    <label htmlFor="Senha">Senha</label><br/>
+                    <label htmlfor="Senha">Senha</label><br/>
                         <InputText id="senha" type="password" className="p-inputtext-sm" placeholder="Usuário" /><br/><br/><br/>
                     </div>
-                    <Button label="Finalizar Cadastro" icon="pi pi-check" iconPos="right" />
+                    <Button label="Finalizar Cadastro" icon="pi pi-check" iconPos="right" onClick={() => window.close('./Login')}/>
                 </Card>
 
             </div>
