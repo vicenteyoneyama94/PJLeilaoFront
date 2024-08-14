@@ -6,7 +6,11 @@ const Home = () => {
 
     return (
         <div>
-            <div>
+            <div className="menu-superior">
+                <a href="#" onclick="alterarTema()" id="linkAlterarTema">Alterar Tema</a>
+            </div>
+            <div className="refactor-home">
+
                 <h1>Inicio</h1>
                 <Button label="Login" link onClick={() => window.open('./Login')} />
             </div>

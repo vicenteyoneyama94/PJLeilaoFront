@@ -4,20 +4,25 @@ import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
+    /* const navigate = useNavigate(
+        navigate('')
+    ) */
+
     return (
         <div>
-            <Card title="Login">
+            <Card title="Login" className="page-login">
                 <InputText placeholder="Login" /><br /><br />
-                <Password placeholder="Senha" feedback={false} /><br />
+                <Password placeholder="Senha" feedback={false} /><br /><br />
 
                 
                 <Button label="Login" icon="pi pi-check" />
-                <Button label="Esqueci a senha" link onClick={() => window.open('./recuperarsenha/RecuperarSenha', '_blank')} /><br/>
+                <Button label="Esqueci a senha" link onClick={() => window.open('./RecuperarSenha')} /><br/>
 
-                <Button label="Cadastre-se" link onClick={() => window.open('./cadastro/CadastrarUsuario', '_blank')} />
+                <Button label="Cadastre-se" link onClick={() => window.open('./CadastrarUsuario', '_blank')} />
             </Card>
 
 
