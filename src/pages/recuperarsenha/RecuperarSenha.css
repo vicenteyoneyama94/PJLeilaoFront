@@ -1,0 +1,9 @@
+.style-recover-password{
+    background-color: rgb(12, 27, 56);
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+}

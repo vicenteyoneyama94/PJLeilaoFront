@@ -10,6 +10,7 @@ const AlterarSenha = () =>{
         <Card title="Alterar senha">
         <InputText type="text" placeholder="Digite a senha atual" />
         <InputText type="text" placeholder="Digite a nova senha" />
+        
         </Card>
         </>
     )

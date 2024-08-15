@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<DefaultLayout><Home/></DefaultLayout>}/>
           <Route path='/login' Component={Login} element={<SimpleLayout><Login/></SimpleLayout>}/>
-          <Route path='/cadastrarusuario' Component={CadastrarUsuario} element={<SimpleLayout><CadastrarUsuario/></SimpleLayout>}/>
+          <Route path='/cadastrarusuario' Component={CadastrarUsuario} element={<DefaultLayout><CadastrarUsuario/></DefaultLayout>}/>
           <Route path='/recuperarsenha' Component={RecuperarSenha} element={<SimpleLayout><RecuperarSenha/></SimpleLayout>}/>
           <Route path='/alterarsenha' Component={AlterarSenha} element={<SimpleLayout><AlterarSenha/></SimpleLayout>}/>
         </Routes>

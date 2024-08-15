@@ -19,7 +19,7 @@ const Login = () => {
                 <Password placeholder="Senha" feedback={false} /><br /><br />
 
                 
-                <Button label="Login" icon="pi pi-check" />
+                <Button label="Login" icon="pi pi-check" onClick={() => window.close('/')} />
                 <Button label="Esqueci a senha" link onClick={() => window.open('./RecuperarSenha')} /><br/>
 
                 <Button label="Cadastre-se" link onClick={() => window.open('./CadastrarUsuario', '_blank')} />
