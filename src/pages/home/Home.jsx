@@ -12,7 +12,9 @@ const Home = () => {
             <div className="refactor-home">
 
                 <h1>Inicio</h1>
-                <Button label="Login" link onClick={() => window.open('./Login')} />
+                <div>
+                    <Button label="Login" link onClick={() => window.open('./Login')} />
+                </div>
             </div>
         </div>
     );
