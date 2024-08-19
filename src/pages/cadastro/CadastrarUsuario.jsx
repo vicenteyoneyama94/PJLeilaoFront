@@ -7,31 +7,7 @@ import { Button } from 'primereact/button';
 
 const CadastrarUsuario = () => {
 
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
-    const [erroSenha, setErroSenha] = useState('');
-
-    const validarSenha = () => {
-        // A senha deve ter pelo menos 8 caracteres, incluindo letras e números
-        const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-        if (!regex.test(senha)) {
-            setErroSenha("A senha deve ter pelo menos 8 caracteres, incluindo letras e números.");
-            return false;
-        }
-        setErroSenha("");
-        return true;
-    }
-
-    const handleFinalizarCadastro = () => {
-        if (validarSenha()) {
-            // Se a senha for válida, prossiga com o cadastro
-            alert("Cadastro realizado com sucesso!");
-            // Exemplo: Aqui você pode chamar a API para cadastrar o usuário
-            // window.close('./Login'); // Redirecionar após o sucesso do cadastro
-        } else {
-            alert("Erro: A senha deve ter pelo menos 8 caracteres, incluindo letras e números.");
-        }
-    }
+    
 
     return (
         <>
