@@ -24,7 +24,7 @@ const CadastrarUsuario = () => {
                     </div>
                     <div className="p-field">
                         <label htmlFor="e-mail">E-mail</label><br />
-                        <InputText type="text" className="p-inputtext-sm" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <InputText type="text" className="p-inputtext-sm" placeholder="E-mail" /* value={email} onChange={(e) => setEmail(e.target.value)} */ />
                     </div>
                     <div className="p-field">
                         <label htmlFor="CPF">CPF</label><br />
@@ -36,11 +36,11 @@ const CadastrarUsuario = () => {
                     </div>
                     <div className="p-password">
                         <label htmlfor="Senha">Senha</label><br />
-                        <InputText id="senha" type="password" className="p-inputtext-sm" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
-                        {erroSenha && <small className="p-error">{erroSenha}</small>}<br /><br /><br />
+                        <InputText id="senha" type="password" className="p-inputtext-sm" placeholder="Senha" /* value={senha} onChange={(e) => setSenha(e.target.value)} */ />
+                        {/* {erroSenha && <small className="p-error">{erroSenha}</small>} */}<br /><br /><br />
                     </div>
                     <Button label="Cancelar" link onClick={() => window.close('./Login')} />
-                    <Button label="Finalizar Cadastro" icon="pi pi-check" iconPos="right" onClick={handleFinalizarCadastro} />
+                    <Button label="Finalizar Cadastro" icon="pi pi-check" iconPos="right" /* onClick={handleFinalizarCadastro} */ />
                 </Card>
 
             </div>
