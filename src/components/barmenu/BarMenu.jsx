@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menubar } from 'primereact/menubar';
+import './BarMenu.css'
 
 const BarMenu = () => {
     const items = [
@@ -10,6 +11,7 @@ const BarMenu = () => {
                 {
                     label: 'Login',
                     icon: 'pi pi-fw pi-bookmark',
+                    command: () => { window.location.href = "/Login"; },
                 },
                 {
                     label: 'Cadastre-se',
@@ -17,36 +19,20 @@ const BarMenu = () => {
                     items: [
                         {
                             label: 'Pessoa Física',
-                            icon: 'pi pi-fw pi-bookmark',
+                            icon: 'pi pi-fw pi-user',
+                            command: () => { window.location.href = "/CadastrarUsuario"; },
                         },
                         {
-                            label: 'Pessoa ',
-                            icon: 'pi pi-fw pi-video'
+                            label: 'Pessoa Jurídica',
+                            icon: 'pi pi-fw pi-building',
+                            command: () => { window.location.href = "/CadastrarEmpresa"; },
                         }
                     ]
                 },
-                {
-                    label: 'Open',
-                    icon: 'pi pi-fw pi-external-link'
-                },
                 { separator: true },
                 {
-                    label: 'Quit',
+                    label: 'Sair',
                     icon: 'pi pi-fw pi-times'
-                }
-            ]
-        },
-        {
-            label: 'Edit',
-            icon: 'pi pi-fw pi-pencil',
-            items: [
-                {
-                    label: 'Undo',
-                    icon: 'pi pi-fw pi-undo'
-                },
-                {
-                    label: 'Redo',
-                    icon: 'pi pi-fw pi-redo'
                 }
             ]
         },
@@ -60,47 +46,19 @@ const BarMenu = () => {
                 },
                 {
                     label: 'Search',
-                    icon: 'pi pi-fw pi-search',
-                    items: [
-                        {
-                            label: 'Text',
-                            icon: 'pi pi-fw pi-file'
-                        },
-                        {
-                            label: 'Video',
-                            icon: 'pi pi-fw pi-video'
-                        }
-                    ]
+                    icon: 'pi pi-fw pi-search'
                 }
             ]
-        },
-        {
-            label: 'Actions',
-            icon: 'pi pi-fw pi-cog',
-            items: [
-                {
-                    label: 'Edit',
-                    icon: 'pi pi-fw pi-pencil',
-                    command: () => { window.location.hash = "/edit"; }
-                },
-                {
-                    label: 'Delete',
-                    icon: 'pi pi-fw pi-trash',
-                    command: () => { window.location.hash = "/delete"; }
-                }
-            ]
-        },
-        {
-            label: 'Quit',
-            icon: 'pi pi-fw pi-power-off'
         }
     ];
 
-    const start = <img alt="logo" src="showcase/images/logo.png" height="40" className="mr-2"></img>;
+    const start = <img alt="logo" src="https://www.picellileiloes.com.br/arquivos/leiloes/logos/612cce1d4238e.jpg" height="40" className="mr-2"></img>;
     const end = <input type="text" placeholder="Search" className="p-inputtext"></input>;
 
-    return (
-        <Menubar model={items} start={start} end={end} />
+    return( 
+    <>
+    <Menubar model={items} start={start} end={end} />;
+    </>
     );
 };
 

@@ -5,10 +5,16 @@ import BarMenu from "../barmenu/BarMenu";
 const Header = () =>{
 
     return(
-        <div className="header">
-            <h1>Menu</h1>
-            <BarMenu/>
-        </div>
+        <>
+        <BarMenu />
+        <header className="header">
+            
+            <div className="header-content">
+                
+                <h1>Bem-vindo ao Sistema de Leilões</h1>
+            </div>
+        </header>
+        </>
     )
 
 }
