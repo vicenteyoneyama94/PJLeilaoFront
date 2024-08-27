@@ -4,6 +4,6 @@
     "password" : "Password",
     "email" : "E-mail",
     "button" : {
-        "label" : "Acessar"
+        "label" : "Login"
     }
 }

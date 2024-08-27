@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 
 const Login = () => {
 
-    const t = useTranslation();
+    const {t} = useTranslation();
 
     /* const navigate = useNavigate(
         navigate('')
@@ -23,27 +23,14 @@ const Login = () => {
                 <Password placeholder="Senha" feedback={false} /><br /><br />
 
                 
-                <Button label={t('login')} icon="pi pi-check" onClick={() => window.close('/')} />
+                <Button label={t('button.label')} icon="pi pi-check" onClick={() => window.close('/')} />
                 <Button label="Esqueci a senha" link onClick={() => window.open('./RecuperarSenha')} /><br/>
 
                 <Button label="Cadastre-se" link onClick={() => window.open('./CadastrarUsuario', '_blank')} />
             </Card>
 
 
-            <div class="grid">
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-                <div class="col-12 md:col-6 lg:col-3">
-                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-                </div>
-            </div>
+            
         </div>
     );
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { Button } from "primereact/button";
 import { useTranslation } from "react-i18next";
@@ -6,9 +6,18 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
 
     const { t, i18n } = useTranslation();
+    const [tema, setTema] = useState("saga-blue");
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
+    }
+
+    const linkAlterarTema = () => {
+        const tema =
+            document.body.getAttribute("data-tema");
+        const novoTema = tema == 'dark' ? 'light' : 'dark';
+        document.body.setAttribute("data-tema", novoTema);
+        localStorage.setItem('tema', novoTema);
     }
 
     return (
@@ -16,7 +25,7 @@ const Home = () => {
 
             <div className="menu-superior">
 
-                <a href="#" onclick="alterarTema()" id="linkAlterarTema">Alterar Tema</a>
+                <a href="#" onclick={linkAlterarTema} id="AlterarTema">Alterar Tema</a>
             </div>
             <div className="refactor-home">
 
@@ -30,6 +39,21 @@ const Home = () => {
                 </button>
                 <div>
                     <Button label="Login" link onClick={() => window.open('./Login')} />
+                </div>
+
+            </div>
+            <div class="grid">
+                <div class="col-12 md:col-6 lg:col-3">
+                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                </div>
+                <div class="col-12 md:col-6 lg:col-3">
+                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                </div>
+                <div class="col-12 md:col-6 lg:col-3">
+                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                </div>
+                <div class="col-12 md:col-6 lg:col-3">
+                    <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
                 </div>
             </div>
         </div>
