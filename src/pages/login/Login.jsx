@@ -5,8 +5,11 @@ import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
+
+    const t = useTranslation();
 
     /* const navigate = useNavigate(
         navigate('')
@@ -15,11 +18,12 @@ const Login = () => {
     return (
         <div>
             <Card title="Login" className="page-login">
+                
                 <InputText placeholder="Login" /><br /><br />
                 <Password placeholder="Senha" feedback={false} /><br /><br />
 
                 
-                <Button label="Login" icon="pi pi-check" onClick={() => window.close('/')} />
+                <Button label={t('login')} icon="pi pi-check" onClick={() => window.close('/')} />
                 <Button label="Esqueci a senha" link onClick={() => window.open('./RecuperarSenha')} /><br/>
 
                 <Button label="Cadastre-se" link onClick={() => window.open('./CadastrarUsuario', '_blank')} />
