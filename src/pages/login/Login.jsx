@@ -4,7 +4,6 @@ import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Login = () => {

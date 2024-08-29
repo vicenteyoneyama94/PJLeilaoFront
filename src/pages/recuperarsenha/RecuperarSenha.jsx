@@ -12,7 +12,7 @@ const RecuperarSenha = () => {
                 <Card title="Recuperar Senha">
                     <InputText placeholder="E-mail" /><br/><br/>
                     <Button label="Cancelar" link onClick={() => window.close('./Login')} />
-                    <Button label="Recuperar Senha" onClick={() => window.close('./Login')} />
+                    <Button label="Recuperar Senha" onClick={() => window.open('./AlterarSenha')} />
                 </Card>
             </div>
         </>

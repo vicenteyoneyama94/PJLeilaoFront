@@ -12,24 +12,14 @@ const Home = () => {
         i18n.changeLanguage(language);
     }
 
-    const linkAlterarTema = () => {
-        const tema =
-            document.body.getAttribute("data-tema");
-        const novoTema = tema == 'dark' ? 'light' : 'dark';
-        document.body.setAttribute("data-tema", novoTema);
-        localStorage.setItem('tema', novoTema);
-    }
+    
 
     return (
         <div>
 
             <div className="menu-superior">
-
-                <a href="#" onclick={linkAlterarTema} id="AlterarTema">Alterar Tema</a>
             </div>
             <div className="refactor-home">
-
-                <h1>Inicio</h1>
                 <h1>{t('welcome')} Página Inicial</h1>
                 <button onClick={() => changeLanguage('en')}>
                     English
