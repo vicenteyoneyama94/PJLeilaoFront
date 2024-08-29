@@ -19,14 +19,8 @@
     background-color: var(--primary-color, #007bff) !important;
 }
 
-[data-tema='dark']{
-    --background-body:#202020;
-    --background-container: #2b2a2a;
-    --color-body:#fcf9f9;
-  }
-  
-  [data-tema='light'] {
-    --background-body: #afacac;
-    --background-container: #dfdbdb;
-    --color-body: #292828;
-  }
+.lang{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}

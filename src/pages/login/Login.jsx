@@ -4,28 +4,37 @@ import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Login = () => {
 
     const {t} = useTranslation();
 
-    /* const navigate = useNavigate(
-        navigate('')
-    ) */
+    const navigate = useNavigate();
+
+    const cadastrarUsuario = () =>{
+        navigate('./CadastrarUsuario');
+    }
+    const recuperarSenha = () =>{
+        navigate('./RecuperarSenha');
+    }
+    const fecharTela = () =>{
+        navigate('/');
+    }
 
     return (
         <div>
             <Card title="Login" className="page-login">
                 
-                <InputText placeholder="Login" /><br /><br />
+                <InputText placeholder="E-mail" /><br /><br />
                 <Password placeholder="Senha" feedback={false} /><br /><br />
 
                 
-                <Button label={t('button.label')} icon="pi pi-check" onClick={() => window.close('/')} />
-                <Button label="Esqueci a senha" link onClick={() => window.open('./RecuperarSenha')} /><br/>
+                <Button label={t('button.label')} icon="pi pi-check" onClick={fecharTela} />
+                <Button label="Esqueci a senha" link onClick={recuperarSenha} /><br/>
 
-                <Button label="Cadastre-se" link onClick={() => window.open('./CadastrarUsuario', '_blank')} />
+                <Button label="Cadastre-se" link onClick={cadastrarUsuario} />
             </Card>
 
 

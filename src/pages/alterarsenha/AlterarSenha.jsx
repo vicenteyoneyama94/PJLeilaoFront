@@ -3,12 +3,14 @@ import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import "./AlterarSenha.css"
+import { useNavigate } from "react-router-dom";
 
 const AlterarSenha = () => {
 
     const [novaSenha, setNovaSenha] = useState('');
     const [confirmarNovaSenha, setConfirmarNovaSenha] = useState('');
     const [erro, setErro] = useState('');
+    const navigate = useNavigate();
 
     const validarSenha = () => {
         if (novaSenha !== confirmarNovaSenha) {
@@ -36,6 +38,10 @@ const AlterarSenha = () => {
         validarSenha();
     };
 
+    const fechar = () =>{
+        navigate.close('./');
+    }
+
     return (
         <>
             <div className="style-change-password">
@@ -48,7 +54,7 @@ const AlterarSenha = () => {
                     {erro && <p style={{ color: 'red' }}>{erro}</p>}<br />
 
                     <Button label="Salvar" icon="pi pi-check" iconPos="right" onClick={() => window.close('./Login')} />
-                    <Button label="Cancelar" link onClick={() => window.close('./Login')} />
+                    <Button label="Cancelar" link onClick={fechar} />
                 </Card>
 
             </div>
