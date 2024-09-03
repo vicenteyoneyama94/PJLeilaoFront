@@ -4,6 +4,7 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import "./AlterarSenha.css"
 import { useNavigate } from "react-router-dom";
+import { Password } from "primereact/password";
 
 const AlterarSenha = () => {
 
@@ -39,7 +40,7 @@ const AlterarSenha = () => {
     };
 
     const fechar = () =>{
-        navigate.close('./');
+        navigate('../Login');
     }
 
     return (
@@ -48,12 +49,12 @@ const AlterarSenha = () => {
                 <Card title="Alterar senha">
                     <InputText type="text" placeholder="E-mail" /><br /><br />
                     <InputText type="text" placeholder="Digite o código recebido" /><br /><br />
-                    <InputText type="text" placeholder="Digite a nova senha" value={novaSenha} onChange={validaNovasenha} /><br />
+                    <Password type="text" placeholder="Digite a nova senha" value={novaSenha} onChange={validaNovasenha} /><br />
                     {erro && <p style={{ color: 'red' }}>{erro}</p>}<br />
-                    <InputText type="text" placeholder="Confirme a senha" value={confirmarNovaSenha} onChange={validaConfirmarSenha} /><br />
+                    <Password type="text" placeholder="Confirme a senha" value={confirmarNovaSenha} onChange={validaConfirmarSenha} /><br />
                     {erro && <p style={{ color: 'red' }}>{erro}</p>}<br />
 
-                    <Button label="Salvar" icon="pi pi-check" iconPos="right" onClick={() => window.close('./Login')} />
+                    <Button label="Salvar" icon="pi pi-check" iconPos="right" onClick={fechar} />
                     <Button label="Cancelar" link onClick={fechar} />
                 </Card>
 

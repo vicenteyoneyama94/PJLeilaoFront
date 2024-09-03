@@ -1,9 +1,12 @@
 {
-    "welcome" : "Welcome",
-    "login" : "Login",
-    "password" : "Password",
-    "email" : "E-mail",
-    "button" : {
-        "label" : "Login"
+    "welcome": "Welcome",
+    "to": "to",
+    "home": "Home-Page",
+    "auction system": "Auction Systems",
+    "login": "Login",
+    "password": "Password",
+    "email": "E-mail",
+    "button": {
+        "label": "Login"
     }
 }

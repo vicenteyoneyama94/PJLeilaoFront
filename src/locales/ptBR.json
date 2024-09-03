@@ -1,5 +1,8 @@
 {
     "welcome" : "Bem-vindo",
+    "to" : "ao",
+    "auction system" : "Sistema de Leilões",
+    "home" : "Página-Home",
     "login" : "Acessar",
     "password" : "Senha",
     "email" : "E-mail"

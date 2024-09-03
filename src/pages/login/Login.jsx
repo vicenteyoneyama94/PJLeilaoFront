@@ -14,10 +14,10 @@ const Login = () => {
     const navigate = useNavigate();
 
     const cadastrarUsuario = () =>{
-        navigate('./CadastrarUsuario');
+        navigate('../CadastrarUsuario');
     }
     const recuperarSenha = () =>{
-        navigate('./RecuperarSenha');
+        navigate('../RecuperarSenha');
     }
     const fecharTela = () =>{
         navigate('/');

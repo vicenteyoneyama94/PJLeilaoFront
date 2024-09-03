@@ -1,6 +1,6 @@
 .refactor-home {
-    background-color: var(--home-background, #ffffff);
-    color: var(--text-color, #333333);
+    background-color: var(--home-background, #e7dfdf);
+    color: var(--text-color, brown);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,15 +8,15 @@
     text-align: center;
     padding: 20px;
 }
-.menu-superior{
-    text-align: right;
-    background-color: var(--menu-background, #f8f9fa);
-}
 .home-textColor{
     color: brown;
 }
 .bg-primary {
     background-color: var(--primary-color, #007bff) !important;
+}
+.grid-auction{
+    text-align: center,
+    
 }
 
 .lang{

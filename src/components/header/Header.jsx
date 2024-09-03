@@ -1,8 +1,11 @@
 import React from "react";
 import './Header.css'
 import BarMenu from "../barmenu/BarMenu";
+import { useTranslation } from "react-i18next";
 
 const Header = () =>{
+
+    const {t} = useTranslation();
 
     return(
         <>
@@ -10,8 +13,7 @@ const Header = () =>{
         <header className="header">
             
             <div className="header-content">
-                
-                <h1>Bem-vindo ao Sistema de Leilões</h1>
+            <h1>{t('welcome')} {t('to')} {t('auction system')}</h1>
             </div>
         </header>
         </>

@@ -15,7 +15,7 @@ const CadastrarUsuario = () => {
     const validarSenha = () => {
         const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
         if (!regex.test(senha)) {
-            setErroSenha("A senha deve ter pelo menos 8 caracteres, incluindo letras e números.");
+            setErroSenha("A senha deve ter pelo menos 8 caracteres,"+" incluindo letras e números.");
             return false;
         }
         setErroSenha("");
@@ -26,7 +26,7 @@ const CadastrarUsuario = () => {
         if (validarSenha()) {
             alert("Cadastro realizado com sucesso!");
         } else {
-            alert("Erro: A senha deve ter pelo menos 6 caracteres, incluindo letras e números.");
+            alert("Erro: A senha deve ter pelo menos 6 caracteres,"+" incluindo letras e números.");
         }
     }
 
@@ -75,7 +75,7 @@ const CadastrarUsuario = () => {
                     </div>
                     <div className="p-password">
                         <label htmlfor="Senha">Senha</label><br />
-                        <InputText id="senha" type="password" className="p-inputtext-sm" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                        <InputText id="senha" type="password" className="p-inputtext-sm" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} /><br />
                         {erroSenha && <small className="p-error">{erroSenha}</small>} <br /><br /><br />
                     </div>
                     <Button label="Cancelar" link onClick={() => window.close('./Login')} />
