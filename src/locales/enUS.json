@@ -1,12 +1,30 @@
 {
-    "welcome": "Welcome",
-    "to": "to",
-    "home": "Home-Page",
-    "auction system": "Auction Systems",
-    "login": "Login",
-    "password": "Password",
-    "email": "E-mail",
-    "button": {
-        "label": "Login"
+    "header":{
+        "auction_systems" : "Auction Systems"
+    },
+    "home": {
+        "welcome": "Welcome to the Auction Systems",
+        "subtext": "Join our community and bid on exclusive items!",
+        "startBidding": "Start Bidding",
+        "currentAuctions": "Current Auctions",
+        "currentAuctionsDesc": "Explore the live auctions happening right now.",
+        "pastAuctions": "Past Auctions",
+        "pastAuctionsDesc": "View the auctions that have ended.",
+        "upcomingAuctions": "Upcoming Auctions",
+        "upcomingAuctionsDesc": "Check out what's coming soon.",
+        "profile": "Your Profile",
+        "profileDesc": "Manage your account and bidding preferences.",
+        "latestAuctions": "Latest Auctions",
+        "item": "Item",
+        "date": "Date",
+        "bid": "Bid"
+    },
+    "login":{
+        "button_login": "Login",
+        "button_cadastrar": "Sign Up",
+        "button_esquecisenha": "Forgot Password",
+        "campo_login": "E-mail",
+        "campo_senha": "Password"
+
     }
 }

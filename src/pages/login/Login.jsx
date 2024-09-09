@@ -6,39 +6,49 @@ import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
 
 const Login = () => {
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const navigate = useNavigate();
 
-    const cadastrarUsuario = () =>{
+    const cadastrarUsuario = () => {
         navigate('../CadastrarUsuario');
     }
-    const recuperarSenha = () =>{
+    const recuperarSenha = () => {
         navigate('../RecuperarSenha');
     }
-    const fecharTela = () =>{
+    const fecharTela = () => {
         navigate('../profile');
     }
 
     return (
         <div>
+            <div>
+                <button onClick={() => changeLanguage('en')}>
+                    English
+                </button>
+                <button onClick={() => changeLanguage('pt')}>
+                    Português
+                </button>
+            </div>
             <Card title="Login" className="page-login">
-                
-                <InputText placeholder="E-mail" /><br /><br />
-                <Password placeholder="Senha" feedback={false} /><br /><br />
 
-                
-                <Button label={t('button.label')} icon="pi pi-check" onClick={fecharTela} />
-                <Button label="Esqueci a senha" link onClick={recuperarSenha} /><br/>
 
-                <Button label="Cadastre-se" link onClick={cadastrarUsuario} />
+                <InputText placeholder={t('login.campo_login')} /><br /><br />
+                <Password placeholder={t('login.campo_senha')} feedback={false} /><br /><br />
+
+
+                <Button label={t('login.button_login')} icon="pi pi-check" onClick={fecharTela} />
+                <Button label={t('login.button_esquecisenha')} link onClick={recuperarSenha} /><br />
+
+                <Button label={t('login.button_cadastrar')} link onClick={cadastrarUsuario} />
             </Card>
 
 
-            
+
         </div>
     );
 

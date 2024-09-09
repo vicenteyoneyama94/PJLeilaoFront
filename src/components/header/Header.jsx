@@ -13,7 +13,7 @@ const Header = () =>{
         <header className="header">
             
             <div className="header-content">
-            <h1>{t('welcome')} {t('to')} {t('auction system')}</h1>
+            <h1>{t('ZIP')} {t('header.auction_systems')}</h1>
             </div>
         </header>
         </>

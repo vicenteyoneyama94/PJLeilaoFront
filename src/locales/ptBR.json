@@ -1,9 +1,30 @@
 {
-    "welcome" : "Bem-vindo",
-    "to" : "ao",
-    "auction system" : "Sistema de Leilões",
-    "home" : "Página-Home",
-    "login" : "Acessar",
-    "password" : "Senha",
-    "email" : "E-mail"
+    "header":{
+        "auction_systems" : "Sistemas de Leilões"
+    },
+    
+    "home": {
+        "welcome": "Bem-vindo à Plataforma de Leilões",
+        "subtext": "Junte-se à nossa comunidade e dê lances em itens exclusivos!",
+        "startBidding": "Comece a Dar Lances",
+        "currentAuctions": "Leilões Atuais",
+        "currentAuctionsDesc": "Explore os leilões ao vivo acontecendo agora.",
+        "pastAuctions": "Leilões Encerrados",
+        "pastAuctionsDesc": "Veja os leilões que já terminaram.",
+        "upcomingAuctions": "Próximos Leilões",
+        "upcomingAuctionsDesc": "Confira o que está por vir.",
+        "profile": "Seu Perfil",
+        "profileDesc": "Gerencie sua conta e preferências de lances.",
+        "latestAuctions": "Últimos Leilões",
+        "item": "Item",
+        "date": "Data"
+    },
+    "login":{
+        "button_login": "Entrar",
+        "button_cadastrar": "Cadastrar",
+        "button_esquecisenha": "Esqueci a senha",
+        "campo_login": "E-mail",
+        "campo_senha": "Senha"
+
+    }
 }

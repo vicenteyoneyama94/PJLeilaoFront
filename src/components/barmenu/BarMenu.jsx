@@ -10,7 +10,7 @@ const BarMenu = () => {
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
     }
-    
+
 
     const items = [
         {
@@ -52,12 +52,12 @@ const BarMenu = () => {
                         {
                             label: 'Português',
                             icon: 'pi pi-fw pi-language',
-                            command: () => {changeLanguage('pt')},
+                            command: () => { changeLanguage('pt') },
                         },
                         {
                             label: 'Inglês',
                             icon: 'pi pi-fw pi-language',
-                            command: () => {changeLanguage('en')},
+                            command: () => { changeLanguage('en') },
                         }
                     ]
                 },
@@ -70,22 +70,22 @@ const BarMenu = () => {
                     icon: 'pi pi-fw pi-search'
                 }
             ]
-            
+
         },
         {
             label: 'Logout',
             icon: 'pi pi-fw pi-file',
-            command: () => { window.location.href = "../Logout"},
+            command: () => { window.location.href = "../Logout" },
         },
     ];
 
     const start = <img alt="logo" src="https://www.picellileiloes.com.br/arquivos/leiloes/logos/612cce1d4238e.jpg" height="40" className="mr-2"></img>;
     const end = <input type="text" placeholder="Search" className="p-inputtext"></input>;
 
-    return( 
-    <>
-    <Menubar model={items} start={start} end={end} />;
-    </>
+    return (
+        <>
+            <Menubar model={items} start={start} end={end} />;
+        </>
     );
 };
 
