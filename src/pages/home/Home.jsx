@@ -1,23 +1,33 @@
 import React from "react";
 import "./Home.css";
 import { useTranslation } from "react-i18next";
-
+import BemVindo from "../../components/welcome/Welcome";
+import Categorias from "../../components/categorias/Categorias";
+import LeiloesHistorico from "../../components/history/History";
 
 const Home = () => {
-
-    
-    const { t, i18n } = useTranslation();
-
-    
+    const { i18n } = useTranslation();
 
     return (
-        <div >
-            {/* <button onClick={() => changeLanguage('en')}>
+        <div className="home-container">
+            <div className="language-switch">
+                <button onClick={() => i18n.changeLanguage('en')}>English</button>
+                <button onClick={() => i18n.changeLanguage('pt')}>Português</button>
+            </div>
+            <BemVindo />
+            <Categorias />
+            <LeiloesHistorico />
+        </div>
+    );
+};
+
+        /*<div >
+            { <button onClick={() => changeLanguage('en')}>
                     English
                 </button>
                 <button onClick={() => changeLanguage('pt')}>
                     Português
-                </button> */}
+                </button> }
             <div className="refactor-home">
                 <div>
                     <h1></h1>
@@ -40,7 +50,5 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    );
-
-}
+    );*/
 export default Home;

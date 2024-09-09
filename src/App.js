@@ -7,6 +7,7 @@ import SimpleLayout from './components/SimpleLayout';
 import RecuperarSenha from './pages/recuperarsenha/RecuperarSenha';
 import AlterarSenha from './pages/alterarsenha/AlterarSenha';
 import CadastrarUsuario from './pages/cadastro/CadastrarUsuario';
+import Profile from './pages/profile/Profile';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/cadastrarusuario' Component={CadastrarUsuario} element={<DefaultLayout><CadastrarUsuario/></DefaultLayout>}/>
           <Route path='/recuperarsenha' Component={RecuperarSenha} element={<SimpleLayout><RecuperarSenha/></SimpleLayout>}/>
           <Route path='/alterarsenha' Component={AlterarSenha} element={<SimpleLayout><AlterarSenha/></SimpleLayout>}/>
+          <Route path='/profile' Component={Profile} element={<SimpleLayout><Profile/></SimpleLayout>}/>
         </Routes>
       </BrowserRouter>
       {/* Footer */}

@@ -20,7 +20,7 @@ const Login = () => {
         navigate('../RecuperarSenha');
     }
     const fecharTela = () =>{
-        navigate('/');
+        navigate('../profile');
     }
 
     return (
