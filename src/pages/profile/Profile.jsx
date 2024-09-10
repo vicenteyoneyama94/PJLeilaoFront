@@ -6,6 +6,7 @@ import Configurações from "../../config/Configuracoes";
 import LeiloesHistorico from "../../components/history/History";
 import Security from "../../components/security/Security";
 import Footer from '../../components/footer/Footer';
+import Dashboard from '../../components/dashboard/Dashboard';
 
 const Profile = () =>{
 
@@ -16,11 +17,13 @@ const Profile = () =>{
             case 0:
                 return <InfoPessoal />;
             case 1:
-                return <Configurações />;
+                return <Dashboard/>;
             case 2:
                 return <LeiloesHistorico />;
-            case 3:
+            case 3:                
                 return <Security />;
+            case 4:
+                return <Configurações />;
             default:
                 return null;
         }

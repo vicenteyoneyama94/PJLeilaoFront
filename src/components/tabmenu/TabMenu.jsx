@@ -4,9 +4,10 @@ import { TabMenu } from 'primereact/tabmenu';
 const ProfileTabMenu = ({ activeIndex, setActiveIndex }) => {
     const items = [
         { label: 'Informações Pessoais', icon: 'pi pi-user' },
-        { label: 'Configurações', icon: 'pi pi-cog' },
+        { label: 'Dashboard', icon: 'pi pi-fw pi-chart-bar' },
         { label: 'Histórico de Leilões', icon: 'pi pi-calendar' },
-        { label: 'Segurança', icon: 'pi pi-shield' }
+        { label: 'Segurança', icon: 'pi pi-shield' },
+        { label: 'Configurações', icon: 'pi pi-cog' }
     ];
 
     return (
