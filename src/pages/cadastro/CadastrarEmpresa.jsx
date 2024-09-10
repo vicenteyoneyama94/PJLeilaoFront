@@ -5,12 +5,13 @@ import "./CadastrarUsuario.css"
 import { Button } from 'primereact/button';
 import { useNavigate } from "react-router-dom";
 
-const CadastrarUsuario = () => {
+const CadastrarEmpresa = () =>{
+
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [erroSenha, setErroSenha] = useState('');
-    const [CPF, setCPF] = useState('');
-    
+    const [CNPJ, setCNPJ] = useState('');
+
     const navigate = useNavigate();
 
     const voltaLogin = () =>{
@@ -36,43 +37,40 @@ const CadastrarUsuario = () => {
         }
     }
 
-    const validaCPF = (e) => {
+    const validaCNPJ = (e) => {
         let value = e.target.value;
-        value = formataCPF(value);
-        setCPF(value);
+        value = formataCNPJ(value);
+        setCNPJ(value);
     };
 
-    const formataCPF = (value) => {
+    const formataCNPJ = (value) => {
         value = value.replace(/\D/g, '');
 
-        if (value.length <= 11) {
+        if (value.length <= 14) {
+            value = value.replace(/(\d{2})(\d)/, '$1.$2');
             value = value.replace(/(\d{3})(\d)/, '$1.$2');
             value = value.replace(/(\d{3})(\d)/, '$1.$2');
-            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            value = value.replace(/(\d{4})(\d)/, '$1/$2');
+            value = value.replace(/(\d{2})(\d{1,2})$/, '$1-$2');
         }
 
         return value;
     };
 
-    return (
-        <>
-            <div className="form-container">
-                <Card title="Cadastrar Usuário" className="form-card">
+    return(
+        <div className="form-container">
+                <Card title="Cadastrar Empresa" className="form-card">
                     <div className="p-field">
-                        <label htmlFor="usuario">Nome</label><br />
-                        <InputText type="text" className="p-inputtext-sm" placeholder="Nome" />
-                    </div>
-                    <div className="p-field">
-                        <label htmlFor="Sobrenome">Sobrenome</label><br />
-                        <InputText type="text" className="p-inputtext-sm" placeholder="Sobrenome" />
+                        <label htmlFor="fantasia">Fantasia</label><br />
+                        <InputText type="text" className="p-inputtext-sm" placeholder="Fantasia" />
                     </div>
                     <div className="p-field">
                         <label htmlFor="e-mail">E-mail</label><br />
                         <InputText type="text" className="p-inputtext-sm" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className="p-field">
-                        <label htmlFor="CPF">CPF</label><br />
-                        <InputText type="text" className="p-inputtext-sm" placeholder="CPF" value={CPF} onChange={validaCPF} maxLength="14" />
+                        <label htmlFor="CNPJ">CNPJ</label><br />
+                        <InputText type="text" className="p-inputtext-sm" placeholder="CNPJ" value={CNPJ} onChange={validaCNPJ} maxLength="14" />
                     </div>
                     <div className="p-field">
                         <label htmlFor="Telefone">Telefone</label><br />
@@ -88,8 +86,8 @@ const CadastrarUsuario = () => {
                     <Button label="Finalizar Cadastro" icon="pi pi-check" iconPos="right" onClick={(FinalizarCadastro)} />
                 </Card>
             </div>
-        </>
     );
-}
 
-export default CadastrarUsuario;
+
+}
+export default CadastrarEmpresa;

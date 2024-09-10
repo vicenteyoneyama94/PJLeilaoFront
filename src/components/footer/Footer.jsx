@@ -5,7 +5,7 @@ const Footer = () =>{
 
     return(
         <div className="footer">
-            <p>Leilão Online Teste &copy;2024</p>
+            <p>ZIP Sistemas para Leilões &copy;2024</p>
         </div>
     );
 

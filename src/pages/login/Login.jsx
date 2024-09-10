@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
+import { ToggleButton } from 'primereact/togglebutton';
 
 const Login = () => {
 

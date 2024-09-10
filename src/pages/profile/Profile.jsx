@@ -5,6 +5,7 @@ import InfoPessoal from "../../components/infopessoal/InfoPessoal";
 import Configurações from "../../config/Configuracoes";
 import LeiloesHistorico from "../../components/history/History";
 import Security from "../../components/security/Security";
+import Footer from '../../components/footer/Footer';
 
 const Profile = () =>{
 
@@ -31,6 +32,7 @@ const Profile = () =>{
             <div className="tab-content">
                 {renderContent()}
             </div>
+            <Footer/>
         </div>
     )
 

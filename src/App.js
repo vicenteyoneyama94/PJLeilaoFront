@@ -8,6 +8,7 @@ import RecuperarSenha from './pages/recuperarsenha/RecuperarSenha';
 import AlterarSenha from './pages/alterarsenha/AlterarSenha';
 import CadastrarUsuario from './pages/cadastro/CadastrarUsuario';
 import Profile from './pages/profile/Profile';
+import CadastrarEmpresa from './pages/cadastro/CadastrarEmpresa';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/recuperarsenha' Component={RecuperarSenha} element={<SimpleLayout><RecuperarSenha/></SimpleLayout>}/>
           <Route path='/alterarsenha' Component={AlterarSenha} element={<SimpleLayout><AlterarSenha/></SimpleLayout>}/>
           <Route path='/profile' Component={Profile} element={<SimpleLayout><Profile/></SimpleLayout>}/>
+          <Route path='/cadastrarempresa' Component={CadastrarEmpresa} element={<SimpleLayout><CadastrarEmpresa/></SimpleLayout>}/>
         </Routes>
       </BrowserRouter>
       {/* Footer */}

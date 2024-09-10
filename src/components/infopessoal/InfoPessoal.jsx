@@ -9,6 +9,7 @@ const InfoPessoal = () => {
             <p><strong>Nome:</strong> Vicente Yoneyama</p>
             <p><strong>Email:</strong> vicenteyoneyama@gmail.com</p>
             <p><strong>Telefone:</strong> (44) 99999-9999</p>
+            <p><strong>CPF:</strong> 132.132.123-58</p>
             <Button label="Editar Informações" icon="pi pi-pencil" className="p-button-info" />
             <Button label="Sair" onClick={Logout} />
         </Card>
